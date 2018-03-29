@@ -29,7 +29,7 @@ const COMPLETER_CONTROL_VALUE_ACCESSOR = {
                 [attr.maxlength]="maxChars" [tabindex]="fieldTabindex" [disabled]="disableInput"
                 [clearSelected]="clearSelected" [clearUnselected]="clearUnselected"
                 [overrideSuggested]="overrideSuggested" [openOnFocus]="openOnFocus" [fillHighlighted]="fillHighlighted" 
-                [openOnClick]="openOnClick" [selectOnClick]="selectOnClick" [selectOnFocus]="selectOnFocus"
+                [openOnClick]="openOnClick" [selectOnClick]="selectOnClick" [selectOnFocus]="selectOnFocus" [autoClose]="autoClose"
                 (blur)="onBlur()" (focus)="onFocus()" (keyup)="onKeyup($event)" (keydown)="onKeydown($event)" (click)="onClick($event)"
                 autocomplete="off" autocorrect="off" autocapitalize="off" />
 
@@ -134,6 +134,7 @@ export class CompleterCmp implements OnInit, ControlValueAccessor, AfterViewChec
     @Input() public disableInput = false;
     @Input() public inputClass: string;
     @Input() public autofocus = false;
+    @Input() public autoClose = true;
     @Input() public openOnFocus = false;
     @Input() public openOnClick = false;
     @Input() public selectOnClick = false;

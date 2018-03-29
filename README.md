@@ -120,6 +120,7 @@ Add the following to `System.js` map configuration:
 |textNoResults|Text displayed when the search returned no results. if the string is falsy it won't be displayed|string|No|
 |textSearching|Text displayed while search is active. if the string is falsy it won't be displayed|string|No|Searching...|
 |autoHighlight|Automatically highlight the best matching search result when the input changes. the "best match" is selected by: exact match, starts with and finally includes|boolean|No|false|
+|autoClose|Automatically close dropdown onBlur, turn this off on a touch device to allow scrolling of dropdown panel|boolean|No|true|
 
 ### ng2-completer events
 

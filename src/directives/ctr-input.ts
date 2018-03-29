@@ -34,6 +34,7 @@ export class CtrInput {
     @Input("openOnClick") public openOnClick = false;
     @Input("selectOnClick") public selectOnClick = false;
     @Input("selectOnFocus") public selectOnFocus = false;
+    @Input("autoClose") public autoClose = true;
 
     @Output() public ngModelChange: EventEmitter<any> = new EventEmitter();
 
@@ -162,7 +163,7 @@ export class CtrInput {
             return;
         }
 
-        if (this.completer.isOpen) {
+        if (this.completer.isOpen && this.autoClose) {
             this.blurTimer = Observable.timer(200).subscribe(() => this.doBlur());
         }
     }
